@@ -8,3 +8,10 @@ before_install :
 
 script :
   - docker run docker-react npm run test -- --coverage
+
+deploy : 
+  provider : elasticbeanstalk
+  region : us-east-1
+  app : Docker-React%20POC
+  
+  
