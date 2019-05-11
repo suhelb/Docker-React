@@ -1,10 +1,10 @@
 #its just a tag
 FROM node:alpine as builder
 WORKDIR '/app'
-COPY ./package.json .
+COPY ./package.json ./
 RUN npm install
 COPY . .
-RUN npm run build 
+RUN npm run build
 
 FROM nginx
 EXPOSE 80
