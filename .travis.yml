@@ -13,5 +13,12 @@ deploy :
   provider : elasticbeanstalk
   region : us-east-1
   app : Docker-React%20POC
-  
+  env : DockerReactPoc-env
+  bucket_name : elasticbeanstalk-us-east-1-438985684090
+  bucket_path :  Docker-React%20POC
+  on :
+    branch: master
+  access_key_id : $AWS_ACCESS_KEY
+  secret_access_key : 
+    secure : "$AWS_SECRET_KEY"
   
